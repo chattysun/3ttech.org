@@ -11,6 +11,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <script>
+      window.Papercups = {
+        config: {
+          token: "e5d9b18a-16c6-4ab3-a7be-a8c93bc8b8ca",
+          inbox: "42688078-2a33-4995-a7ce-6423ae097989",
+          title: "Welcome to 3T Tech",
+          subtitle: "Ask us about Cloud Computing ☁️",
+          primaryColor: "#1890ff",
+          greeting: "How can I help you?",
+          newMessagePlaceholder: "Start typing...",
+          showAgentAvailability: false,
+          agentAvailableText: "We're online right now!",
+          agentUnavailableText: "We're away at the moment.",
+          requireEmailUpfront: false,
+          iconVariant: "outlined",
+          baseUrl: "https://app.chattysun.com",
+          iframeUrlOverride: "https://window.chattysun.com"
+          // Optionally include data about your customer here to identify them
+          // customer: {
+          //   name: __CUSTOMER__.name,
+          //   email: __CUSTOMER__.email,
+          //   external_id: __CUSTOMER__.id,
+          //   metadata: {
+          //     plan: "premium"
+          //   }
+          // }
+        },
+      };
+
+    function loadScript() {
+        var existingScript = document.getElementById('chattysun-widget');
+
+        // If the script already exists, remove it
+        if (existingScript) {
+          existingScript.parentNode.removeChild(existingScript);
+          window.Papercups.config.defaultIsOpen = true;
+        }
+
+        // Create a new script element
+        var script = document.createElement('script');
+        script.id = 'chattysun-widget';
+        script.type = 'text/javascript';
+        script.async = true;
+        script.defer = true;
+        script.src = 'https://app.chattysun.com/widget.js';
+
+        // Append the new script to the document head
+        document.head.appendChild(script);
+      }
+
+      // Load the script initially
+      loadScript();
+
+      // Set a timeout to reload the script
+      setTimeout(loadScript, 3000);
+    </script>
   </head>
   <body class="is-preload">
 
@@ -20,8 +76,8 @@
       <!-- One -->
       <section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 	<div class="content">
-	  <h1>Story</h1>
-	  <p class="major">A (modular, highly tweakable) responsive one-page template designed by <a href="https://html5up.net">HTML5 UP</a> and released for free under the <a href="https://html5up.net/license">Creative Commons</a>.</p>
+	  <h1>3T Tech</h1>
+	  <p class="major">A leading provider of Cloud Solutions backed by Microsoft Azure</p>
 	  <ul class="actions stacked">
 	    <li><a href="#first" class="button big wide smooth-scroll-middle">Get Started</a></li>
 	  </ul>
